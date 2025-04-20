@@ -11,7 +11,7 @@ Microservice is written on FastAPI, has rate limitter in middleware level which 
 
 👎 no shared memory in case of distributed system 
 
-❓ possible solution: change config, doesn't save bucket by unique id, instead just save bucket, add some caching like Redis
+❓ possible solution: change config, doesn't save bucket by user ip, instead just save single bucket, add some distributed caching like Redis
 
 ## Algorithm:
 token bucket rate limiting
@@ -25,3 +25,6 @@ token bucket rate limiting
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
+
+
+![Alt text](postman.png)
